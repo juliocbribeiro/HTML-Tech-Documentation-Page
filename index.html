@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>HTML Documentation</title>
+</head>
+
+<body>
+    <nav id="navbar">
+        <header>HTML Documentation</header>
+        <ul>
+            <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+            <li>
+                <a class="nav-link" href="#Anatomy_of_an_HTML_element">Anatomy of an HTML element</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Nesting_elements">Nesting elements</a>
+            </li>
+            <li><a class="nav-link" href="#Empty_elements">Empty elements</a></li>
+            <li><a class="nav-link" href="#Images">Images</a></li>
+            <li>
+                <a class="nav-link" href="#Marking_up_text">Marking up text</a>
+            </li>
+            <li><a class="nav-link" href="#Related_topic">Related topic</a></li>
+            <li><a class="nav-link" href="#Reference">Reference</a></li>
+        </ul>
+    </nav>
+
+    <main id="main-doc">
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <article>
+                <p>
+                    HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning
+                    and structure of web content. Other technologies besides HTML are generally used to describe a web
+                    page's appearance/presentation (CSS) or functionality/behavior (JavaScript).
+                </p>
+
+                <p>
+                    "Hypertext" refers to links that connect web pages to one another, either within a single website or
+                    between websites. Links are a fundamental aspect of the Web. By uploading content to the Internet
+                    and linking it to pages created by other people, you become an active participant in the World Wide
+                    Web.
+                </p>
+                <p>HTML uses "markup" to annotate text, images, and other content for display in a Web browser.
+                </p>
+            </article>
+        </section>
+
+
+        <section class="main-section" id="Anatomy_of_an_HTML_element">
+            <header>Anatomy of an HTML element</header>
+            <article>
+                <p>The main parts of our element are as follows: </p>
+                <ol>
+                    <li>
+                        The opening tag: This consists of the name of the element (in this case, p), wrapped in opening
+                        and
+                        closing angle brackets. This states where the element begins or starts to take effect — in this
+                        case
+                        where the paragraph begins.
+                    </li>
+                    <li>The closing tag: This is the same as the opening tag, except that it includes a forward slash
+                        before
+                        the element name. This states where the element ends — in this case where the paragraph ends.
+                        Failing to add a closing tag is one of the standard beginner errors and can lead to strange
+                        results.
+                    </li>
+                    <li> The content: This is the content of the element, which in this case, is just text.
+                    </li>
+                    <li>The element: The opening tag, the closing tag, and the content together comprise the element.
+                    </li>
+                </ol>
+                <p>Attributes contain extra information about the element that you don't want to appear in the actual
+                    content. Here, class is the attribute name and editor-note is the attribute value. The class
+                    attribute allows you to give the element a non-unique identifier that can be used to target it (and
+                    any other elements with the same class value) with style information and other things.</p>
+                <p>An attribute should always have the following:</p>
+                <ol>
+                    <li>
+                        A space between it and the element name (or the previous attribute, if the element already has
+                        one or more attributes).</li>
+                    <li>
+                        The attribute name followed by an equal sign.</li>
+                    <li>
+                        The attribute value wrapped by opening and closing quotation marks.</li>
+                </ol>
+            </article>
+        </section>
+
+
+
+        <section class="main-section" id="Nesting_elements">
+            <header>Nesting elements</header>
+            <article>
+                <p>
+                    You can put elements inside other elements too — this is called nesting.
+                    if we want to emphasize any words we could wrap the word in a <code> "strong"</code>, which means
+                    that the word is to be strongly emphasized:
+                    <code>
+                            "My cat is <"strong"> very </"strong"> grumpy.
+                        </code>
+                    The elements have to open and close correctly so that they are clearly inside or outside one
+                    another. If they overlap as shown above, then your web browser will try to make the best guess at
+                    what you were trying to say, which can lead to unexpected results. So don't do it!
+                </p>
+            </article>
+        </section>
+
+
+        <section class="main-section" id="Empty_elements">
+            <header>Empty elements</header>
+            <article>
+                <p>
+                    Some elements have no content and are called empty elements. Take the "img" tag element that we
+                    already
+                    have in our HTML page:
+                    <code>
+                    "img src="images/firefox-icon.png" alt="My test image"
+                </code>
+                </p>
+
+                <p>This contains two attributes, but there is no closing tag and no inner content. This is
+                    because an image element doesn't wrap content to affect it. Its purpose is to embed an image in the
+                    HTML page in the place it appears.
+                </p>
+            </article>
+        </section>
+
+
+        <section class="main-section" id="Images">
+            <header>Images</header>
+            <p>
+                Let's turn our attention to the "img" tag element again:
+                <code>"img src="images/firefox-icon.png" alt="My test image"</code>
+            </p>
+            <p>
+                As we said before, it embeds an image into our page in the position it appears. It does this via the src
+                (source) attribute, which contains the path to our image file.
+
+                We have also included an alt (alternative) attribute. In this attribute, you specify descriptive text
+                for users who cannot see the image, possibly because of the following reasons:
+            <ol>
+                <li> They are visually impaired. Users with significant visual impairments often use tools called screen
+                    readers to read out the alt text to them.</li>
+                <li> Something has gone wrong causing the image not to display.</li>
+            </ol>
+            </p>
+            <p>
+                The keywords for alt text are "descriptive text". The alt text you write should provide the reader with
+                enough information to have a good idea of what the image conveys
+            </p>
+        </section>
+
+        <section class="main-section" id="Marking_up_text">
+            <header>Marking up text</header>
+            <article>
+                This section will cover some of the essential HTML elements you'll use for marking up the text
+
+                <h3>Headings</h3>
+                <p>Heading elements allow you to specify that certain parts of your content are headings — or
+                    subheadings. In the same way that a book has the main title, chapter titles, and subtitles, an HTML
+                    document can too. HTML contains 6 heading levels, <code>"h1"–"h6"</code>, although you'll commonly
+                    only use 3
+                    to 4 at most.
+                </p>
+                <h3>Paragraphs</h3>
+                <p>As explained above, "p" tag elements are for containing paragraphs of text; you'll use these
+                    frequently
+                    when marking up regular text content:
+                </p>
+                <h3>Lists</h3>
+                <p>
+                    A lot of the web's content is lists and HTML has special elements for these. Marking up lists always
+                    consists of at least 2 elements. The most common list types are ordered and unordered lists:
+                <ol>
+                    <li> <strong> Unordered lists</strong> are for lists where the order of the items doesn't matter,
+                        such as a shopping list. These are wrapped in a <"ul"> element.</li>
+                    <li> <strong>Ordered lists </strong>are for lists where the order of the items does matter. These
+                        are wrapped in an <"ol"> element.</li>
+                </ol>
+                </p>
+                <h3>Links</h3>
+                <p>Links are very important — they are what makes the web a web! To add a link, we need to use a simple
+                    element "a" being the short form for "anchor". To make text within your paragraph into a
+                    link, follow these steps:
+                <ol>
+                    <li>Choose some text. We chose the text "Mozilla Manifesto".</li>
+                    <li> Wrap the text in an "a" tag element.</li>
+                </ol>
+                </p>
+                <p>You might get unexpected results if you omit the https:// or http:// part, called the protocol, at
+                    the beginning of the web address. After making a link, click it to make sure it is sending you where
+                    you wanted it to.</p>
+            </article>
+        </section>
+
+        <section class="main-section" id="Related_topic">
+            <header>Related topic</header>
+            <article>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Applying_color" target="_blank">Applying
+                    color to HTML elements using CSS</a>
+                <p>
+                    This article covers most of the ways you use CSS to add color to HTML content, listing
+                    what parts of HTML documents can be colored and what CSS properties to use when doing
+                    so. Includes examples, links to palette-building tools, and more.
+                </p>
+            </article>
+        </section>
+
+        <section class="main-section" id="Reference">
+            <header>Reference</header>
+            <article>
+                <ul>
+                    <li>
+                        All the documentation in this page is taken from
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">MDN</a>
+                    </li>
+                </ul>
+            </article>
+        </section>
+
+        <footer id="footer">
+            <span>&copy; 2021 - Júlio Ribeiro Web Developer</span>
+                
+
+        </footer>
+    </main>
+    
+</body>
+
+</html>
